@@ -11,7 +11,7 @@ resta(2,2)
 def mult(a, b):
     return a * b
 
-mult(2,2)
+mult(2,2)    
 
 def div(a, b):
     return a/b
