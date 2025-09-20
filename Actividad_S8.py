@@ -1,4 +1,5 @@
-#Problema: Calcular la propina de un restaurante. Cuando vas a comer con amigos hay que tener en cuenta ciertas cosas
+#Por: Erick Josué Rivera Velásquez
+# Problema: Calcular la propina de un restaurante. Cuando vas a comer con amigos hay que tener en cuenta ciertas cosas
 # Saber cuanto es el total de la cuenta, elegir que porcentaje de propina dejar, decidir entre cuantas personas 
 # dividir la cuenta y ver cuanto le toca pagar a cada uno (incluyendo propina). Aunque en general al momento de pagar
 # no se le da tanta complicación a veces ya sea por conveniencia o por etiqueta, es bueno tener en cuenta estos aspectos.
