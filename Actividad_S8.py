@@ -1,7 +1,24 @@
 #Problema: Calcular la propina de un restaurante. Cuando vas a comer con amigos hay que tener en cuenta ciertas cosas
 # Saber cuanto es el total de la cuenta, elegir que porcentaje de propina dejar, decidir entre cuantas personas 
 # dividir la cuenta y ver cuanto le toca pagar a cada uno (incluyendo propina). Aunque en general al momento de pagar
-# no se le da tanta complicación a veces ya sea por conveniencia o por etiqueta, es bueno tener en cuenta estos aspectos.#
+# no se le da tanta complicación a veces ya sea por conveniencia o por etiqueta, es bueno tener en cuenta estos aspectos.
+# 
+# Los datos que se deben ingresar son:
+# El precio total.
+# El porcentaje de la propina.
+# El numero de personas.
+# 
+# Como se mostrará el resultado (ej):
+# Total de la cuenta ($):
+# 50.75
+# 
+# Porcentaje de propina:
+# 15%
+# 
+# Numero de personas:
+# 4
+# 
+# Cada persona paga: $14.59#
 
 import sys 
 from PyQt5.QtWidgets import(QApplication, QWidget, QVBoxLayout,
