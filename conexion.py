@@ -1,24 +1,24 @@
-import psycopg2
-from urllib.parse import quote_plus
-from dotenv import load_dotenv
-import os
+import psycopg2 #Importa el modulo 'psycopg2' que es el adaptador de PostgreSQL para Python
+from urllib.parse import quote_plus #quote_plus, que codifica caracteres especiales en URLs.
+from dotenv import load_dotenv #load_dotenv, carga las variables de entrono desde un archivo .env
+import os #Permite acceder a dichas variables
 
-load_dotenv()
+load_dotenv() #Lee el archivo .env
 
-password = os.getenv("SUPABASE_PASSWORD")
+password = os.getenv("SUPABASE_PASSWORD") #La contraseña que se toma del archivo .env
 
 if password is None:
     raise ValueError("❌ La variable SUPABASE_PASSWORD no está definida en .env")
 
-encoded_password = quote_plus(password)
+encoded_password = quote_plus(password) #Codifica la variable para que pueda ser leida, si lleva caracteres especiales
 
-host = "aws-0-us-east-2.pooler.supabase.com"
-dbname = "postgres"
-user = "postgres.eqhuafhkuollnehjhjoi"
+host = "aws-0-us-east-2.pooler.supabase.com" #La direccion del servidor
+dbname = "postgres" #Nombre de la base de datos
+user = "postgres.eqhuafhkuollnehjhjoi" #El usuario
 
 DATABASE_URL = f"postgresql://{user}:{encoded_password}@{host}:5432/{dbname}"
-
-try:
+#DATABASE_URL, Construye la URL de conexión completa con el formato que PostgreSQL entiende.
+try: #
     conn = psycopg2.connect(DATABASE_URL)
     print("Conectado a Supabase desde Python")
 
