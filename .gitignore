@@ -1,0 +1,17 @@
+# Archivos de entorno
+.env
+.env.local
+
+# Dependencias
+node_modules/
+__pycache__/
+*.egg-info/
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+*.swp
+*.swo
