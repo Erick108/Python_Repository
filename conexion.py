@@ -23,9 +23,9 @@ try:
     print("Conectado a Supabase desde Python")
 
     cur = conn.cursor()
-    #cur.execute("SELECT version();")
-    #version = cur.fetchone()
-    #print("Versión de PostgreSQL:", version[0])
+    cur.execute("SELECT version();")
+    version = cur.fetchone()
+    print("Versión de PostgreSQL:", version[0])
 
 #    cur.execute("""
 #        CREATE TABLE IF NOT EXISTS usuarios (
