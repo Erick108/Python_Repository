@@ -13,8 +13,8 @@ contra = os.getenv("MAIL_PASSWORD")
 if host is None or puerto is None or user is None or contra is None:
     raise ValueError ("❌ Alguna variable no está definida o es mal escrita en el .env")
 
-destinatario = "erickrivera.v109@gmail.com"
-#destinatario = ["04karenportillo@gmail.com", "yimu2104@gmail.com", "rubiomoises27@icloud.com"]
+#destinatario = "erickrivera.v109@gmail.com"
+destinatario = ["04karenportillo@gmail.com", "yimu2104@gmail.com", "rubiomoises27@icloud.com"]
 asunto = "Prueba"
 cuerpo = "Wazzzzzzaaa (Mensaje enviado desde Python)"
 mensaje = f"Subject: {asunto}\n\n{cuerpo}"
