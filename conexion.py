@@ -12,13 +12,13 @@ if password is None:
 
 encoded_password = quote_plus(password) #Codifica la variable para que pueda ser leida, si lleva caracteres especiales
 
-host = "aws-0-us-east-2.pooler.supabase.com" #La direccion del servidor
-dbname = "postgres" #Nombre de la base de datos
-user = "postgres.eqhuafhkuollnehjhjoi" #El usuario
+host = os.getenv("SUPABASE_HOST") #La direccion del servidor
+dbname = os.getenv("SUPABASE_DBNAME") #Nombre de la base de datos
+user = os.getenv("SUPABASE_USER") #El usuario
 
 DATABASE_URL = f"postgresql://{user}:{encoded_password}@{host}:5432/{dbname}"
 #DATABASE_URL, Construye la URL de conexión completa con el formato que PostgreSQL entiende.
-try: #
+try: 
     conn = psycopg2.connect(DATABASE_URL)
     print("Conectado a Supabase desde Python")
 
@@ -44,7 +44,7 @@ try: #
         INSERT INTO usuarios (nombre, email)
         VALUES (%s, %s)
         RETURNING id;
-    """, ("Erick", "erick@example.com"))
+    """, ("Josué", "josue@example.com"))
 
     # Obtener el ID del registro insertado
     nuevo_id = cur.fetchone()[0]
