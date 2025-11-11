@@ -1,0 +1,6 @@
+-- database: ../db.sqlite3
+
+SELECT * FROM app3_cliente;
+INSERT INTO app3_cliente VALUES(1 ,'Erick', 'Rivera', 'erickrivera@example.com', 77588924, '05238724-9');
+
+INSERT INTO app3_pedido VALUES(1, '11-11-2025-10:09:00', 199.75, 1)
