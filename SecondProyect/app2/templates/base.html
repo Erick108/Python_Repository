@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            background-color: rgb(36, 36, 130);
+            color: aliceblue;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+            text-align: center;
+        }
+        img {  
+            width: 15%;
+            height: 15%;
+        }
+    </style>
+    {%block title%}<title>Document</title>{%endblock%}
+</head>
+<body>
+    <div>
+        <h1>Hola Mundo!</h1>
+        <h2>Hola! ¡¿Que paso?!</h2>
+        <img src="https://cdn.memegenerator.es/imagenes/memes/thumb/33/29/33294312.jpg" alt="example">
+
+        <nav>
+            <a href="{%url 'inicio'%}">Inicio</a>
+            <a href="{%url 'laptop'%}">Laptop</a>
+        </nav>
+    </div>
+    {%block body%}
+    {%endblock%}
+</body>
+</html>
